@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GeoQuiz</string>
+    <string name="correct_toast">Правильно!</string>
+    <string name="false_button">Ложь</string>
+    <string name="incorrect_toast">Неправильно!</string>
+    <string name="true_button">Истина</string>
+    <string name="question_text">Константинополь - самый большой город в Турции?</string>
+</resources>
