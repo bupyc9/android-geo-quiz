@@ -2,8 +2,9 @@
 <resources>
     <string name="app_name">GeoQuiz</string>
     <string name="correct_toast">Правильно!</string>
-    <string name="false_button">Ложь</string>
+    <string name="false_button">Неверно</string>
     <string name="incorrect_toast">Неправильно!</string>
-    <string name="true_button">Истина</string>
+    <string name="true_button">Верно</string>
     <string name="question_text">Константинополь - самый большой город в Турции?</string>
+    <string name="next_question_button">Далее</string>
 </resources>
