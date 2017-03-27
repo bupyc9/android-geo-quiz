@@ -8,8 +8,8 @@
     <string name="next_question_button">Далее</string>
     <string name="question_text">Константинополь - самый большой город в Турции?</string>
     <string name="question_oceans">Тихий океан больше Атлантического океана?</string>
-    <string name="question_mideast">Красное море и Индийский окена соединяет Суетский канал?</string>
+    <string name="question_mideast">Красное море и Индийский океан соединяет Суетский канал?</string>
     <string name="question_africa">Исток Нила в Египте?</string>
     <string name="question_americas">Амазонка самая длинная река в Америке?</string>
-    <string name="question_asia">Озеро Байкал самый старый и глубокий источник пресной воды?</string>
+    <string name="question_asia">Озеро Байкал самый старый и глубокий источник пресной воды в мире?</string>
 </resources>
