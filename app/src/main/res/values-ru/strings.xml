@@ -6,6 +6,7 @@
     <string name="incorrect_toast">Неправильно!</string>
     <string name="true_button">Верно</string>
     <string name="next_question_button">Далее</string>
+    <string name="prev_question_button">Назад</string>
     <string name="question_text">Константинополь - самый большой город в Турции?</string>
     <string name="question_oceans">Тихий океан больше Атлантического океана?</string>
     <string name="question_mideast">Красное море и Индийский океан соединяет Суетский канал?</string>
