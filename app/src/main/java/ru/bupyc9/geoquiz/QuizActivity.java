@@ -16,6 +16,8 @@ public class QuizActivity extends AppCompatActivity {
     private ImageButton mPrevButton;
     private TextView mQuestionTextView;
 
+    private static final String KEY_INDEX = "index";
+
     private Question[] mQuestionBank = new Question[]{
             new Question(R.string.question_oceans, true),
             new Question(R.string.question_mideast, false),
@@ -27,9 +29,19 @@ public class QuizActivity extends AppCompatActivity {
     private int mCurrentIndex = 0;
 
     @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(KEY_INDEX, mCurrentIndex);
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
+
+        if (savedInstanceState != null) {
+            mCurrentIndex = savedInstanceState.getInt(KEY_INDEX, 0);
+        }
 
         mQuestionTextView = (TextView) findViewById(R.id.question_text_view);
         updateQuestion();
