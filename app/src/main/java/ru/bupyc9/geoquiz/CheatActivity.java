@@ -11,6 +11,7 @@ import android.widget.TextView;
 public class CheatActivity extends AppCompatActivity {
     public static final String EXTRA_ANSWER_IS_TRUE = "ru.bupyc9.geoquiz.answer_is_true";
     public static final String EXTRA_ANSWER_SHOWN = "ru.bupyc9.geoquiz.answer_shown";
+    public static final String KEY_SAVE_STATE = "saveState";
     private boolean mAnswerIsTrue;
     private TextView mAnswerTextView;
     private Button mShowAnswer;
@@ -24,18 +25,34 @@ public class CheatActivity extends AppCompatActivity {
         mAnswerTextView = (TextView) findViewById(R.id.answerTextView);
         mShowAnswer = (Button) findViewById(R.id.showAnsweButton);
 
+        if (savedInstanceState != null) {
+            if (savedInstanceState.getBoolean(KEY_SAVE_STATE)) {
+                checkCheater();
+            }
+        }
+
         mShowAnswer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (mAnswerIsTrue) {
-                    mAnswerTextView.setText(R.string.true_button);
-                } else {
-                    mAnswerTextView.setText(R.string.false_button);
-                }
-
-                setAnswerShowResult(true);
+                checkCheater();
             }
         });
+    }
+
+    private void checkCheater() {
+        if (mAnswerIsTrue) {
+            mAnswerTextView.setText(R.string.true_button);
+        } else {
+            mAnswerTextView.setText(R.string.false_button);
+        }
+
+        setAnswerShowResult(true);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putBoolean(KEY_SAVE_STATE, true);
     }
 
     public static Intent newIntent(Context packageContext, boolean answerIsTrue) {
