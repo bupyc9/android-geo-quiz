@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 public class CheatActivity extends AppCompatActivity {
     public static final String EXTRA_ANSWER_IS_TRUE = "ru.bupyc9.geoquiz.answer_is_true";
+    public static final String EXTRA_ANSWER_SHOWN = "ru.bupyc9.geoquiz.answer_shown";
     private boolean mAnswerIsTrue;
     private TextView mAnswerTextView;
     private Button mShowAnswer;
@@ -31,6 +32,8 @@ public class CheatActivity extends AppCompatActivity {
                 } else {
                     mAnswerTextView.setText(R.string.false_button);
                 }
+
+                setAnswerShowResult(true);
             }
         });
     }
@@ -40,5 +43,15 @@ public class CheatActivity extends AppCompatActivity {
         i.putExtra(EXTRA_ANSWER_IS_TRUE, answerIsTrue);
 
         return i;
+    }
+
+    private void setAnswerShowResult(boolean isAnswerShown) {
+        Intent data = new Intent();
+        data.putExtra(EXTRA_ANSWER_SHOWN, isAnswerShown);
+        setResult(RESULT_OK, data);
+    }
+
+    public static boolean wasAnswerShown(Intent result) {
+        return result.getBooleanExtra(EXTRA_ANSWER_SHOWN, false);
     }
 }
