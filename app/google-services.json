@@ -15,6 +15,22 @@
       },
       "oauth_client": [
         {
+          "client_id": "661562680346-vi0eurodtrott6oa5k1luavvs81uejgh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ru.bupyc9.geoquiz",
+            "certificate_hash": "941ea84a36453889b8690a219fa182a4f286d7e4"
+          }
+        },
+        {
+          "client_id": "661562680346-kum1j80gcq0hrrhiuiq3pmpgo33f2hj1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ru.bupyc9.geoquiz",
+            "certificate_hash": "2c3bf5b122c857092e3dfe42b1fbdc2b41242679"
+          }
+        },
+        {
           "client_id": "661562680346-fd1j9kmhk73u1ugts5l1cfr3kd6jaclr.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +45,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "661562680346-fd1j9kmhk73u1ugts5l1cfr3kd6jaclr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2
