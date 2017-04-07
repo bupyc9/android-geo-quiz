@@ -2,6 +2,7 @@ package ru.bupyc9.geoquiz;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +11,8 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Locale;
+
 public class QuizActivity extends AppCompatActivity {
 
     private Button mTrueButton;
@@ -17,6 +20,7 @@ public class QuizActivity extends AppCompatActivity {
     private ImageButton mNextButton;
     private ImageButton mPrevButton;
     private TextView mQuestionTextView;
+    private TextView mBuildVersion;
     private Button mCheatButton;
     private int mCurrentIndex = 0;
     private boolean mIsCheater;
@@ -60,6 +64,9 @@ public class QuizActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
+
+        mBuildVersion = (TextView) findViewById(R.id.buildVersion);
+        mBuildVersion.setText(String.format(Locale.getDefault(), "%d", Build.VERSION.SDK_INT));
 
         mCheatButton = (Button) findViewById(R.id.cheat_button);
         mCheatButton.setOnClickListener(new View.OnClickListener() {
